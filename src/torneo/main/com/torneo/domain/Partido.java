@@ -14,18 +14,19 @@ public class Partido {
 	public void iniciarPartido() {
 		int resultado = (int) Math.floor(Math.random() * 100);
 		if (resultado <= 30) {
-			equipoLocal.agregarPuntos((byte) 3);
 			this.ganador = equipoLocal;
 			this.perdedor = equipoVisitante;
+			equipoLocal.agregarPuntos((byte) 3);
 		}
 		if (resultado > 30 && resultado <= 70) {
 			equipoLocal.agregarPuntos((byte) 1);
 			equipoVisitante.agregarPuntos((byte) 1);
 			this.ganador = null;
-		} else {
-			equipoVisitante.agregarPuntos((byte) 3);
+		}
+		if(resultado>70&&resultado<=99) {
 			this.ganador = equipoVisitante;
 			this.perdedor = equipoLocal;
+			equipoVisitante.agregarPuntos((byte) 3);
 		}
 	}
 

@@ -25,8 +25,8 @@ public class Aplicacion {
 
 		/*
 		 * Solo se crea una lista de jugadores para todos los equipos debido a lo
-		 * tedioso que resulta de crear una lista completa de jugadores para cada los
-		 * equipos
+		 * tedioso que resulta de crear una lista completa de jugadores para cada 
+		 * equipo
 		 */
 
 		Equipo leon = new Equipo("Leon", jugadores);
